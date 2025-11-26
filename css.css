@@ -3,23 +3,21 @@
 /* Police utilisée pour le titre principal (h1) */
 @font-face {
   font-family: "Great Vibes";
-  src: url("GreatVibes-Regular.ttf") format("truetype");
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-/* Variante Regular utilisée pour les titres (h2, h3) */
 @font-face {
   font-family: "YantramanavRegular";
-  src: url("../Yantramanav-Regular.ttf") format("truetype");
+  src: url("fonts/Yantramanav-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
-/* Variante Light utilisée pour le corps de texte et la sidebar */
 @font-face {
   font-family: "YantramanavLight";
-  src: url("Yantramanav-Light.ttf") format("truetype");
-  font-weight: 300;   /* Light */
+  src: url("fonts/Yantramanav-Light.ttf") format("truetype");
+  font-weight: 300;   
   font-style: normal;
 }
 
