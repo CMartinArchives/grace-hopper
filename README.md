@@ -39,7 +39,16 @@ Le projet comprend :
 
 ---
 
-## Architecture recommandée
+## Mise en ligne
+
+Le projet peut être publié via GitHub Pages en activant l’hébergement depuis la branche `main` et en plaçant le fichier `html.html` à la racine.  
+L’URL prend alors la forme :
+
+https://CMartinArchives.github.io/grace-hopper/
+
+---
+
+## Architecture
 
 ```bash
 grace_hopper/
@@ -53,12 +62,3 @@ grace_hopper/
     ├── GreatVibes-Regular.ttf
     ├── Yantramanav-Regular.ttf
     └── Yantramanav-Light.ttf
-
----
-
-## Mise en ligne (optionnelle)
-
-Le projet peut être publié via GitHub Pages en activant l’hébergement depuis la branche `main` et en plaçant le fichier `html.html` à la racine.  
-L’URL prend alors la forme :
-
-https://CMartinArchives.github.io/grace-hopper/
