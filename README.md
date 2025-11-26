@@ -41,17 +41,18 @@ Le projet comprend :
 
 ## Architecture recommandée
 
+```bash
 grace_hopper/
 ├── README.md
 ├── html.html
 ├── css.css
 ├── images/
-│ └── grace-hopper.jpg
-│ └── Flag_of_the_United_States.svg
+│   ├── grace-hopper.jpg
+│   └── Flag_of_the_United_States.svg
 └── fonts/
-├── GreatVibes-Regular.ttf
-├── Yantramanav-Regular.ttf
-└── Yantramanav-Light.ttf
+    ├── GreatVibes-Regular.ttf
+    ├── Yantramanav-Regular.ttf
+    └── Yantramanav-Light.ttf
 
 ---
 
@@ -61,12 +62,3 @@ Le projet peut être publié via GitHub Pages en activant l’hébergement depui
 L’URL prend alors la forme :
 
 https://CMartinArchives.github.io/grace-hopper/
-
----
-
-## Auteur
-
-**Clara Martin**  
-Master 2 — Technologies numériques appliquées à l’histoire  
-École nationale des chartes
-
