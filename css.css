@@ -1,0 +1,386 @@
+/* DECLARATION DES POLICES */
+
+/* Police utilisée pour le titre principal (h1) */
+@font-face {
+  font-family: "Great Vibes";
+  src: url("GreatVibes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variante Regular utilisée pour les titres (h2, h3) */
+@font-face {
+  font-family: "YantramanavRegular";
+  src: url("../Yantramanav-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+/* Variante Light utilisée pour le corps de texte et la sidebar */
+@font-face {
+  font-family: "YantramanavLight";
+  src: url("Yantramanav-Light.ttf") format("truetype");
+  font-weight: 300;   /* Light */
+  font-style: normal;
+}
+
+
+/* THEME DE COULEURS */
+
+:root {
+  --color-bg-block: #31312f;   /* Fond des blocs texte et sidebar */
+  --color-accent: #d6ab2c;     /* Couleur d’accent (liens, titres) */
+  --color-text: #ffffff;       /* Couleur de texte principale */
+}
+
+
+/* COMPORTEMENT GLOBAL */
+
+html {
+  /* Défilement fluide pour les liens d’ancrage internes */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Couleur de fond générale de la page */
+  background: #333331;
+  /* Couleur de texte par défaut (réutilise la variable) */
+  color: var(--color-text);
+}
+
+
+/* TITRES PRINCIPAUX */
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  /* Soulignement stylisé du titre */
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+
+  /* Très léger effet de brillance sur le texte */
+  text-shadow: 0.5px 0 0 white;
+}
+
+/* Ligne décorative sous le h1 */
+h1:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Titres de sections et sous-sections (h2, h3) */
+h2,
+h3 {
+  font-family: "YantramanavRegular", sans-serif;
+  font-weight: 400;
+}
+
+
+/* LIENS */
+
+a {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+/* Sous-lignage uniquement au survol pour les liens de texte */
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* NAVIGATION (MENU) */
+
+nav {
+  /* La navigation prend juste la largeur de son contenu et est centrée */
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+
+  /* Ajustement des espaces autour de la nav (proche du modèle) */
+  margin-top: 0.8rem;     /* réduit l’espace entre h1 et nav */
+  margin-bottom: 0.5rem;  /* réduit l’espace sous la nav */
+}
+
+/* Liste des liens de navigation en flex sur deux lignes */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+
+  /* Espacements entre les éléments du menu */
+  column-gap: 2rem;   /* espace horizontal entre les mots  */
+  row-gap: 0.2rem;    /* espace vertical entre les 2 lignes */
+
+  padding: 0;
+  list-style: none;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Le dernier élément (Notes et références) passe à la ligne suivante */
+nav li:last-child {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 0.1rem;
+}
+
+/* Style par défaut des liens du menu (en blanc) */
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Effet hover demandé : texte du menu en jaune, sans soulignement */
+nav a:hover {
+  color: #d6ab2c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Police et interligne du texte dans le menu */
+nav ul li a {
+  font-family: "YantramanavLight", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;       /* réduit l’espace vertical */
+}
+
+
+/* MISE EN PAGE PRINCIPALE (FLEX) */
+
+main {
+  /* Largeur max du contenu pour éviter les lignes trop longues */
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+/* Conteneur principal : texte principal + sidebar */
+.contenu-principal {
+  display: flex;         /* Mise en page en colonnes */
+  gap: 2rem;             /* Espacement entre texte et sidebar */
+  align-items: flex-start;
+  color: #31312f;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+
+/* BLOC DE TEXTE PRINCIPAL */
+
+.texte {
+  flex: 1 1 auto;        /* Le texte prend tout l’espace disponible */
+  min-width: 0;          /* Empêche l’overflow horizontal forcé */
+  max-width: 1500px;
+
+  /* padding spécifique (redéfini plus bas par la règle commune avec .sidebar) */
+  padding: 4rem 5rem;
+}
+
+/* Titres h2 dans le texte principal */
+.texte h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #d6ab2c;
+}
+
+/* Sous-titres h3 dans le texte principal */
+.texte h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: #e0e0e0;
+}
+
+/* Paragraphes du texte principal */
+.texte p {
+  font-family: "YantramanavLight", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: white;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+  flex: 0 0 450px;         /* Colonne droite fixe de 450px */
+  max-width: 450px;
+  box-sizing: border-box;  /* Le padding est inclus dans la largeur */
+
+  padding: 2.5rem 3rem;    /* padding précisé ici + dans la règle commune */
+
+  color: white;
+  background: #31312f;
+  border-radius: 10px;
+
+  /* Sidebar sticky sur grands écrans */
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+
+  font-family: "YantramanavLight", sans-serif;
+}
+
+
+/* STYLE COMMUN AUX BLOCS TEXTE ET SIDEBAR */
+
+.texte,
+.sidebar {
+  background: var(--color-bg-block);  /* Couleur de fond commune */
+  border-radius: 10px;
+
+  /* Ombre directionnelle (lumière en haut à gauche) */
+  box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.65);
+
+  /* Espacement interne cohérent et lisible */
+  padding: 2.5rem 3rem;
+
+  /* Légère marge droite pour décoller du bord de la fenêtre */
+  margin-right: 1.5rem;
+}
+
+
+/* TYPO DE LA SIDEBAR */
+
+.sidebar li,
+.sidebar span,
+.sidebar p,
+.sidebar figcaption {
+  font-family: "YantramanavLight", sans-serif;
+  font-weight: 300;
+}
+
+
+/* FIGURE ET IMAGE (PORTRAIT) */
+
+figure {
+  margin: 0;
+  position: relative;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Image responsive avec arrondis + effet de zoom au survol */
+figure img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  /* Transition pour l’animation de zoom */
+  transition: transform 0.3s ease;
+}
+
+/* Effet zoom demandé au survol de l’image */
+figure img:hover {
+  transform: scale(1.05); /* zoom léger */
+}
+
+/* Légende de l’image (figcaption) */
+figure figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  position: static;   /* La légende se place en dessous de l’image */
+  bottom: 8px;
+  left: 8px;
+  background: none;
+  color: white;
+  padding: 0;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: left;
+  width: fit-content;
+  margin-top: 0.4rem;
+  display: block;
+  max-width: 260px;
+  font-style: italic;
+}
+
+
+/* INFOS BIOGRAPHIQUES DE LA SIDEBAR */
+
+.infos {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* Chaque ligne d’info est en flex : label + valeur */
+.infos li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+/* Colonne de gauche : libellé (largeur fixe) */
+.infos strong {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+}
+
+/* Colonne de droite : contenu qui peut s’étendre */
+.infos span {
+  flex: 1;
+  display: block;
+  line-height: 1.4;
+}
+
+/* Section des références à la fin de la page */
+#references {
+  color: white;
+  font-family: "YantramanavLight", sans-serif;
+  font-weight: 300;
+}
+
+/* Petit drapeau US dans la sidebar */
+.flag {
+  width: 20px;
+  height: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  /* Sur petit écran, on empile les blocs */
+  .contenu-principal {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* La sidebar passe au-dessus et perd son comportement sticky */
+  .sidebar {
+    order: -1;           /* La sidebar passe au-dessus du texte */
+    position: static;    /* Suppression du sticky sur petit écran */
+    max-width: 100%;
+  }
+
+  /* On réduit un peu le padding interne du texte sur mobile */
+  .texte {
+    padding: 2rem 1.5rem;
+  }
+}
+
+

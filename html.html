@@ -1,0 +1,545 @@
+<!--
+  Page réalisée dans le cadre du devoir "Grace Hopper".
+  Objectifs : mise en page responsive en flexbox, sidebar sticky sur grand écran,
+  navigation par ancres avec défilement fluide, utilisation de polices personnalisées.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Pour l’adaptation responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compatibilité -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grace Hopper – Biographie</title>
+    <!-- Feuille de styles externe contenant les polices, flexbox, responsive, etc. -->
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  
+  <body>
+    <!-- EN-TETE DE LA PAGE -->
+    <header>
+
+      <!-- Titre principal de la page, avec la police "Great Vibes" -->
+      <h1>Grace Hopper</h1>
+    
+      <!-- Navigation principale avec liens d’ancrage vers les sections -->
+      <nav>
+        <ul>
+          <!-- Chaque lien pointe vers un id correspondant dans le contenu -->
+          <li><a href="#resume">Résumé</a></li>
+          <li><a href="#biographie">Biographie</a></li>
+          <li><a href="#distinctions">Distinctions</a></li>
+          <li><a href="#hommages">Hommages</a></li>
+          <li><a href="#anecdote">Anecdote</a></li>
+          <li><a href="#references">Notes et références</a></li>
+        </ul>
+      </nav>
+    
+    </header>
+
+    <!-- CONTENU PRINCIPAL DE LA PAGE, LAYOUT EN FLEX : TEXTE + SIDEBAR -->
+    <main class="contenu-principal">
+
+      <!-- Bloc de texte principal (article biographique) -->
+      <section class="texte">
+
+        <!-- Introduction courte, utilisée comme "résumé" -->
+        <p id="resume">
+          Grace Murray Hopper est une informaticienne américaine et Rear admiral (lower half) de la marine américaine,
+          née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington.
+          Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage Cobol en 1959.
+        </p>
+
+        <!-- SECTION BIOGRAPHIE -->
+        <h2 id="biographie">Biographie</h2>
+
+        <!-- Sous-partie : jeunesse -->
+        <h3>Jeunesse</h3>
+        <p>
+          Grace Brewster Murray est née le 9 décembre 1906 à New York. 
+          Elle commence à étudier les mathématiques, la physique et l'économie au Vassar College, et en sort diplômée
+          d'un Bachelor of Art en mathématiques et physique en 1928. 
+          Elle enseigne au Vassar tout en obtenant son Master of Arts, en 1930, puis son doctorat, en 1934,
+          en mathématiques à l'université Yale<sup><a href="#note3">3</a></sup>,<sup><a href="#note4">4</a></sup>.
+        </p>
+        <p>
+          En 1930, elle épouse Vincent Foster Hopper, un professeur de littérature de l'université NYU. 
+          Le couple, qui n'a pas d'enfants, divorce en 1945<sup><a href="#note3">3</a></sup>.
+        </p>
+  
+        <!-- Sous-partie : carrière -->
+        <h3>Carrière</h3>
+        <p>
+          En 1943, Grace Hopper s'engage dans la marine américaine. 
+          Promue au grade de lieutenant, elle est affectée l'année suivante au Bureau of Ordnance Computation Project
+          de l'université Harvard. 
+          Elle travaille dans l'équipe de Howard Aiken sur l'ordinateur Harvard Mark I. 
+          Elle fait partie du premier groupe, comptant trois personnes, apprenant à le programmer<sup><a href="#note3">3</a></sup>.
+        </p>
+        <p>
+          À la fin de la Seconde Guerre mondiale, elle quitte le service actif de la marine, mais continue à travailler
+          au développement des ordinateurs Harvard Mark II puis Harvard Mark III pour le compte du Computation Laboratory
+          d'Harvard<sup><a href="#note3">3</a></sup>.
+        </p>
+        <p>
+          En 1949, Grace Hopper est employée par la Eckert-Mauchly Computer Corporation (en) (EMCC) et rejoint l'équipe
+          développant UNIVAC I à Philadelphie. 
+          En 1950, la compagnie est rachetée par Remington Rand. 
+          Hopper conçoit l'année suivante le premier compilateur pour UNIVAC I, nommé A-0 System<sup><a href="#note3">3</a></sup>. 
+          En 1955, elle invente le langage FLOW-MATIC aussi appelé B-0 (Business Language Version 0) pour l'UNIVAC I. 
+          À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit
+          dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. 
+          De cette idée naît le langage Cobol en 1959.
+        </p>              
+        <p>
+          En 1966, conformément au règlement en vigueur, elle doit quitter la Navy après avoir atteint l'âge de 60 ans,
+          mais est rappelée l'année suivante<sup><a href="#note6">6</a></sup>.
+          Au cours des années 1970, elle mène les travaux d'établissement de normes pour les ordinateurs, en particulier
+          les premiers langages de programmation évolués : Fortran et Cobol.
+        </p>
+        <p>
+          Grace Hopper reste dans la Marine jusqu'en 1986, date à laquelle elle prend sa retraite avec le grade de Rear admiral
+          (lower half). 
+          Elle est alors l'officier le plus âgé de la marine américaine<sup><a href="#note7">7</a></sup>.
+        </p>              
+        <p>
+          Jusqu'à son décès en 1992, elle est employée comme consultante externe par Digital Equipment, pour des conférences
+          sur les débuts de l'informatique<sup><a href="#note6">6</a></sup>. 
+          Elle est enterrée avec les honneurs militaires au cimetière national d'Arlington<sup><a href="#note8">8</a></sup>.
+        </p>
+
+        <!-- SECTION DISTINCTIONS -->
+        <h2 id="distinctions">Distinctions</h2>
+        <p>
+          En 1986, Grace Hopper est décorée de la Defense Distinguished Service Medal, plus haute distinction existante pour
+          les non-combattants<sup><a href="#note6">6</a></sup>. 
+          En 1991, elle reçoit la National Medal of Technology pour « ses contributions novatrices dans le développement de
+          langages de programmation »<sup><a href="#note8">8</a></sup>. 
+          En 1983 elle est lauréate du prix Ada-Lovelace<sup><a href="#note9">9</a></sup>.
+        </p>
+        <p>
+          Le 22 novembre 2016, Barack Obama lui décerne à titre posthume la médaille présidentielle de la Liberté<sup><a href="#note10">10</a></sup>.
+        </p>
+
+        <!-- SECTION HOMMAGES -->
+        <h2 id="hommages">Hommages</h2>
+        <p>
+          En 1973, Grace Hopper est nommée « membre émérite » (distinguished fellow) de la British Computer Society<sup><a href="#note5">5</a></sup>. 
+          Elle est inscrite au National Women's Hall of Fame en 1994<sup><a href="#note7">7</a></sup>. 
+          Près d'une cinquantaine de doctorats honoraires lui ont été décernés<sup><a href="#note5">5</a></sup>. 
+          En 1997, un destroyer de la classe Arleigh Burke, est baptisé USS Hopper (DDG-70)<sup><a href="#note3">3</a></sup>.
+        </p>
+        <p>
+          Une conférence technique internationale, organisée depuis 1994 par l'Institut Anita-Borg, est baptisée
+          Grace Hopper Celebration of Women in Computing (en) en son honneur.
+        </p>
+        <p>
+          La toponymie mondiale lui rend aussi hommage. 
+          En France, le Laboratoire d'informatique de l'École polytechnique a baptisé une de ses salles en son hommage. 
+          Aux États-Unis, l'académie navale a baptisé son centre de cyberdéfense en son hommage<sup><a href="#note11">11</a></sup>. 
+          Au Québec, une future rue de Montréal porte officiellement son nom depuis le 3 mars 2017<sup><a href="#note12">12</a></sup>
+          (cependant, la rue située au Technoparc de Saint-Laurent n'était toujours pas construite en date de février 2024). 
+          En France, la place Grace-Murray-Hopper (13e arrondissement de Paris), lui rend hommage<sup><a href="#note13">13</a></sup> dans le nouveau quartier de la station F. 
+          La promotion 2018-2021 de la MIAGE de Sophia-Antipolis est nommée en son honneur.
+        </p>
+        <p>L'astéroïde (5773) Hopper porte également son nom.</p>
+        <p>En 2022, la société de calcul informatique Nvidia lui dédie sa dernière microarchitecture.</p>
+  
+        <!-- SECTION ANECDOTE -->
+        <h2 id="anecdote">Anecdote</h2>
+        <p>
+          La popularisation du terme bug est attribuée à Grace Hopper. 
+          En effet, bien que l'utilisation de ce terme soit attestée dès 1878<sup><a href="#note14">14</a></sup>, la présence d'un insecte (bug)
+          dans l'ordinateur Mark II, sur lequel travaillait Hopper, a permis la consolidation définitive du terme
+          pour désigner un problème informatique.
+        </p>
+        <p>
+          Néanmoins, comme le mentionne Hopper elle-même, elle n'était pas présente lorsque son équipe a découvert
+          l'insecte dans l'ordinateur<sup><a href="#note15">15</a></sup>,<sup><a href="#note16">16</a></sup>,<sup><a href="#note17">17</a></sup>.
+        </p>
+
+        <!-- NOTES ET REFERENCES -->
+        <section id="references">
+          <h2>Notes et références</h2>
+
+          <!-- Liste ordonnée des notes (style Wikipédia) -->
+          <ol>
+
+            <li id="note1">
+              «
+              <a href="http://www.computerhistory.org/collections/catalog/102702026" target="_blank" rel="noopener noreferrer">
+                http://www.computerhistory.org/collections/catalog/102702026
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.computerhistory.org%2Fcollections%2Fcatalog%2F102702026"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] » (consulté le 21 décembre 2016)
+            </li>
+            
+            <li id="note2">
+              «
+              <a href="https://sirismm.si.edu/EADpdfs/NMAH.AC.0324.pdf" target="_blank" rel="noopener noreferrer">
+                https://sirismm.si.edu/EADpdfs/NMAH.AC.0324.pdf
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fsirismm.si.edu%2FEADpdfs%2FNMAH.AC.0324.pdf"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] » (consulté le 21 décembre 2016)
+            </li>
+
+            <li id="note3">
+              (en) Susan Ware (dir.), Stacy Braukman <em>et al., Notable American Women : A Biographical Dictionary : Completing the Twentieth Century</em>, vol. 5, 
+              <a href="https://fr.wikipedia.org/wiki/Harvard_University_Press" target="_blank" rel="noopener noreferrer">
+                Harvard University Press
+              </a>, 2005, 768 p.
+              (
+              <a href="https://fr.wikipedia.org/wiki/International_Standard_Book_Number" target="_blank" rel="noopener noreferrer">
+                ISBN
+              </a>
+              <a href="https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Ouvrages_de_r%C3%A9f%C3%A9rence/978-0-674-01488-6"
+                 target="_blank" rel="noopener noreferrer">
+                978-0-674-01488-6
+              </a>,
+              <a href="https://www.hup.harvard.edu/books/9780674014886" target="_blank" rel="noopener noreferrer">
+                présentation en ligne
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.hup.harvard.edu%2Fcatalog.php%3Fisbn%3D9780674014886"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ], 
+              <a href="https://books.google.fr/books?id=WSaMu4F06AQC&pg=PA309#v=onepage&q&f=false"
+                 target="_blank" rel="noopener noreferrer">
+                lire en ligne
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=https%3A%2F%2Fbooks.google.fr%2Fbooks%3Fid%3DWSaMu4F06AQC%26pg%3DPA309"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ]), p. 309-311
+            </li>
+                        
+            <li id="note4">
+              (en) «
+              <a href="https://www.genealogy.math.ndsu.nodak.edu/id.php?id=15664" target="_blank" rel="noopener noreferrer">
+                Grace Murray Hopper
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=https%3A%2F%2Fwww.genealogy.math.ndsu.nodak.edu%2Fid.php%3Fid%3D15664"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », sur le site du 
+              <a href="https://fr.wikipedia.org/wiki/Mathematics_Genealogy_Project" target="_blank" rel="noopener noreferrer">
+                <em>Mathematics Genealogy Project</em>
+              </a>
+            </li>
+              
+            <li id="note5">
+              Adam Juniper, « Grace Hopper », dans Mark Steadman,
+              <em>3 minutes pour comprendre 50 notions essentielles du codage informatique</em>, Paris, Le courrier du livre, 2022 (
+              <a href="https://fr.wikipedia.org/wiki/International_Standard_Book_Number" target="_blank" rel="noopener noreferrer">
+                ISBN
+              </a>
+              <a href="https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Ouvrages_de_r%C3%A9f%C3%A9rence/978-2-70292074-9" target="_blank" rel="noopener noreferrer">
+                978-2-70292074-9
+              </a>), p. 44-45
+            </li>
+                                 
+            <li id="note6">
+              (en)
+              <a href="https://fr.wikipedia.org/wiki/Judy_Green" target="_blank" rel="noopener noreferrer">
+                Judy Green
+              </a> et 
+              <a href="https://fr.wikipedia.org/wiki/Jeanne_LaDuke" target="_blank" rel="noopener noreferrer">
+                Jeanne LaDuke
+              </a>, <em>Pioneering Women in American Mathematics : The Pre-1940 PhD's</em>, Providence, R.I., 
+              <a href="https://fr.wikipedia.org/wiki/American_Mathematical_Society" target="_blank" rel="noopener noreferrer">
+                Société mathématique américaine
+              </a>, coll. « History of mathematics » (no 34), 2009, 349 p. (
+              <a href="https://fr.wikipedia.org/wiki/International_Standard_Book_Number" target="_blank" rel="noopener noreferrer">
+                ISBN
+              </a>
+              <a href="https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Ouvrages_de_r%C3%A9f%C3%A9rence/978-0-8218-4376-5" target="_blank" rel="noopener noreferrer">
+                978-0-8218-4376-5
+              </a>, 
+              <a href="https://books.google.fr/books?id=IRbOAwAAQBAJ&pg=PA205#v=onepage&q&f=false" target="_blank" rel="noopener noreferrer">
+                lire en ligne
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=https%3A%2F%2Fbooks.google.fr%2Fbooks%3Fid%3DIRbOAwAAQBAJ%26pg%3DPA205"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ]), p. 205-206
+            </li>
+                      
+            <li id="note7">
+              (en) John H. Cushman Jr., «
+              <a href="https://www.nytimes.com/1986/08/14/us/washington-talk-admiral-hopper-s-farewell.html" target="_blank" rel="noopener noreferrer">
+                Admiral Hopper's Farewell
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=https%3A%2F%2Fwww.nytimes.com%2F1986%2F08%2F14%2Fus%2Fwashington-talk-admiral-hopper-s-farewell.html"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] »,
+              <a href="https://fr.wikipedia.org/wiki/The_New_York_Times" target="_blank" rel="noopener noreferrer">
+                <em>The New York Times</em>
+              </a>, 14 août 1986
+            </li>
+                                 
+            <li id="note8">
+              Jérôme Béglé, «
+              <a href="https://www.lepoint.fr/high-tech-internet/grace-hopper-la-femme-qui-a-fait-parler-les-ordinateurs-09-12-2013-1766185_47.php"
+                 target="_blank" rel="noopener noreferrer">
+                Grace Hopper, la femme qui a fait parler les ordinateurs
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.lepoint.fr%2Fhigh-tech-internet%2Fgrace-hopper-la-femme-qui-a-fait-parler-les-ordinateurs-09-12-2013-1766185_47.php"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] »,
+              <a href="https://fr.wikipedia.org/wiki/Le_Point" target="_blank" rel="noopener noreferrer">
+                <em>Le Point</em>
+              </a>, 9 décembre 2013
+            </li>
+                                              
+            <li id="note9">
+              (en) John Markoff, «
+              <a href="https://www.nytimes.com/1992/01/03/us/rear-adm-grace-m-hopper-dies-innovator-in-computers-was-85.html"
+                 target="_blank" rel="noopener noreferrer">
+                Rear Adm. Grace M. Hopper Dies; Innovator in Computers Was 85
+              </a> 
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=https%3A%2F%2Fwww.nytimes.com%2F1992%2F01%2F03%2Fus%2Frear-adm-grace-m-hopper-dies-innovator-in-computers-was-85.html"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] »,
+              <a href="https://fr.wikipedia.org/wiki/The_New_York_Times" target="_blank" rel="noopener noreferrer">
+                <em>The New York Times</em>
+              </a>, 3 janvier 1992
+            </li>
+        
+            <li id="note10">
+              (en) J. A. N. Lee, «
+              <a href="https://history.computer.org/pioneers/hopper.html" target="_blank" rel="noopener noreferrer">
+                Grace Brewster Murray Hopper
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fhistory.computer.org%2Fpioneers%2Fhopper.html"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », IEEE Computer Society (consulté le 20 octobre 2018).
+            </li>
+            
+            <li id="note11">
+              Devin Coldewey, «
+              <a href="https://techcrunch.com/2016/11/17/grace-hopper-and-margaret-hamilton-awarded-presidential-medal-of-freedom-for-computing-advances/"
+                 target="_blank" rel="noopener noreferrer">
+                Grace Hopper and Margaret Hamilton awarded Presidential Medal of Freedom for computing advances
+              </a> » 
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=https%3A%2F%2Ftechcrunch.com%2F2016%2F11%2F17%2Fgrace-hopper-and-margaret-hamilton-awarded-presidential-medal-of-freedom-for-computing-advances%2F"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ], techcrunch.com, 17 novembre 2016.
+            </li>
+                     
+            <li id="note12">
+              (en) usnapao, «
+              <a href="https://usnatrident.blogspot.com/2016/09/naval-academy-to-name-cyber-building.html"
+                 target="_blank" rel="noopener noreferrer">
+                Naval Academy To Name Cyber Building After Computer Pioneer Rear Adm. Grace Hopper
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fusnatrident.blogspot.fr%2F2016%2F09%2Fnaval-academy-to-name-cyber-building.html"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », "TheTrident - The official blog of the U.S. Naval Academy", 8 septembre 2016
+            </li>
+                      
+            <li id="note13">
+              «
+              <a href="http://www.toponymie.gouv.qc.ca/ct/toposweb/fiche.aspx?no_seq=431613"
+                 target="_blank" rel="noopener noreferrer">
+                Rue Grace-Hopper - Montréal (Ville)
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.toponymie.gouv.qc.ca%2Fct%2Ftoposweb%2Ffiche.aspx%3Fno_seq%3D431613"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », sur <em>gouv.qc.ca</em> (consulté le 5 avril 2023).
+            </li>
+            
+            <li id="note14">
+              «
+              <a href="https://www.francegenweb.org/wiki/index.php?title=Place_Grace_Murray_Hopper"
+                 target="_blank" rel="noopener noreferrer">
+                Place Grace Murray Hopper — WikiGenWeb
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.francegenweb.org%2Fwiki%2Findex.php%3Ftitle%3DPlace_Grace_Murray_Hopper"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », sur <em>www.francegenweb.org</em> (consulté le 16 mars 2019)
+            </li>
+            
+            <li id="note15">
+              (en) Alexander Magoun and Paul Israel, «
+              <a href="https://spectrum.ieee.org/did-you-know-edison-coined-the-term-bug"
+                 target="_blank" rel="noopener noreferrer">
+                Did You Know? Edison Coined the Term "Bug"
+              </a> » 
+              [
+              <a href="https://web.archive.org/web/20210810151640/https://spectrum.ieee.org/did-you-know-edison-coined-the-term-bug"
+                 target="_blank" rel="noopener noreferrer">
+                archive du 10 août 2021
+              </a>
+              ], <em>IEEE Spectrum</em>, 1er août 2013 (consulté le 6 février 2024).
+            </li>
+
+            <li id="note16">
+              (en) «
+              <a href="https://web.archive.org/web/20080106210506/http://www.byte.com/art/9404/sec15/art1.htm"
+                 target="_blank" rel="noopener noreferrer">
+                BYTE.com
+              </a> », 6 janvier 2008 (version du 6 janvier 2008 sur
+              <a href="https://fr.wikipedia.org/wiki/Internet_Archive" target="_blank" rel="noopener noreferrer">
+                <em>Internet Archive</em>
+              </a>)
+            </li>
+            
+            <li id="note17">
+              (en) «
+              <a href="http://catb.org/jargon/html/B/bug.html" target="_blank" rel="noopener noreferrer">
+                bug
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Fcatb.org%2Fjargon%2Fhtml%2FB%2Fbug.html"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », sur <em>catb.org</em> (consulté le 24 mars 2017)
+            </li>
+            
+            <li id="note18">
+              (en) «
+              <a href="https://americanhistory.si.edu/collections/object/nmah_334663"
+                 target="_blank" rel="noopener noreferrer">
+                Log Book With Computer Bug
+              </a>
+              [
+              <a href="https://archive.wikiwix.com/cache/?url=http%3A%2F%2Famericanhistory.si.edu%2Fcollections%2Fsearch%2Fobject%2Fnmah_334663"
+                 target="_blank" rel="noopener noreferrer">
+                archive
+              </a>
+              ] », sur <em>National Museum of American History</em> (consulté le 24 mars 2017)
+            </li>
+          </ol>
+
+        </section>
+      </section>
+
+      <!-- SIDEBAR BIOGRAPHIE -->
+      <aside class="sidebar">
+        <figure>
+          <!-- Image de Grace Hopper avec effet de zoom au survol -->
+          <img src="../images/grace-hopper.jpg" alt="Grace Hopper">
+          <figcaption>Grace Hopper en 1984.</figcaption>
+        </figure>
+
+        <!-- Liste des informations biographiques structurées -->
+        <ul class="infos">
+          <li>
+            <strong>Nom de naissance&nbsp;</strong>
+            <span>Grace Brewster Murray</span>
+          </li>
+
+          <li>
+            <strong>Surnom&nbsp;</strong>
+            <span>Amazing Grace</span>
+          </li>
+
+          <li>
+            <strong>Naissance&nbsp;</strong> 
+            <span>
+              9 décembre 1906, 
+              <a href="https://fr.wikipedia.org/wiki/New_York" target="_blank" rel="noopener noreferrer">New York</a>, 
+              <a href="https://fr.wikipedia.org/wiki/%C3%89tats-Unis" target="_blank" rel="noopener noreferrer">États-Unis</a>
+            </span>
+          </li>
+
+          <li>
+            <strong>Décès&nbsp;</strong>
+            <span>
+              1er janvier 1992 (à 85 ans),
+              <a href="https://fr.wikipedia.org/wiki/Comt%C3%A9_d%27Arlington" target="_blank" rel="noopener noreferrer">Comté d'Arlington</a>, 
+              <a href="https://fr.wikipedia.org/wiki/%C3%89tats-Unis" target="_blank" rel="noopener noreferrer">États-Unis</a>
+            </span>
+          </li>
+
+          <li>
+            <strong>Sépulture&nbsp;</strong>
+            <span>Cimetière national d'Arlington (7 janvier 1992)</span>
+          </li>
+          
+          <li>
+            <strong>Nationalité&nbsp;</strong>
+            <span>
+              Américaine
+              <img src="../images/Flag_of_the_United_States.svg" alt="Drapeau des États-Unis" class="flag">
+            </span>
+          </li>
+
+          <li>
+            <strong>Activités&nbsp;</strong>
+            <span>
+              Mathématicienne, professeure d'université, programmeuse, informaticienne,
+              officier de marine, physicienne
+            </span>
+          </li>
+
+          <li>
+            <strong>Période d'activité&nbsp;</strong>
+            <span>À partir de 1943</span>
+          </li>
+
+          <li>
+            <strong>Formation&nbsp;</strong>
+            <span>
+              Wardlaw-Hartridge School (en) (1923-1924)<br>
+              <a href="https://fr.wikipedia.org/wiki/Vassar_College" target="_blank" rel="noopener noreferrer">
+                Vassar College
+              </a> (licence (en)) (1924-1928)<br>
+              <a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Yale" target="_blank" rel="noopener noreferrer">
+                Université Yale
+              </a> (maîtrise (en)) (1928-1930)<br>
+              <a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Yale" target="_blank" rel="noopener noreferrer">
+                Université Yale
+              </a> (doctorat) (jusqu'en 1934)
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+    </main>
+
+  </body>
+</html>
