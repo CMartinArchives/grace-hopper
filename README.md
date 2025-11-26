@@ -41,8 +41,7 @@ Le projet comprend :
 
 ## Mise en ligne
 
-Le projet peut être publié via GitHub Pages en activant l’hébergement depuis la branche `main` et en plaçant le fichier `html.html` à la racine.  
-L’URL prend alors la forme :
+Le projet a été publié via GitHub Pages :
 
 https://CMartinArchives.github.io/grace-hopper/
 
